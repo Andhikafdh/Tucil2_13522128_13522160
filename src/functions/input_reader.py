@@ -17,7 +17,7 @@ def setPoints(position, npoints):
     while i < npoints:
         try:
             print(f"Masukkan posisi titik ke-{i+1} : ", end="")
-            current_point = list(map(np.float64, input().strip().split()))
+            current_point = np.array(list(map(np.float64, input().strip().split())))
             if len(current_point) != 2:
                 raise Exception
             position[i] = current_point

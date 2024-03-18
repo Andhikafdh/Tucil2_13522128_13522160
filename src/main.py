@@ -1,7 +1,7 @@
 # from functions.bf_bezier import *
 # from functions.dnc_bezier import *
 from functions.input_reader import *
-from functions.visualize_graph_copy import *
+from functions.visualize_graph import *
 
 def pBezierASCII():
     print("""
@@ -23,12 +23,15 @@ def main():
 
     # setPoints(x_position, y_position, nPoints)
     setPoints(positions, nPoints)
+    print(positions)
 
     nIterations = getNIterations()
 
     method = getMethod()
 
     animate_graph(positions, nIterations, method)
+
+    plt.show()
 
 if __name__ == '__main__':
     main()
