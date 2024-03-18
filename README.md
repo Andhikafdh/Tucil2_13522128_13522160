@@ -57,10 +57,15 @@ $ git clone git@github.com:Andhikafdh/Tucil2_13522128_13522160.git
 ```sh
 $ cd src
 ```
+2. To run the program. <br>
+
+```sh
+$ python main.py
+```
 
 
 ## **Screenshot**
-
+<img src="doc/Home.jpg"> 
 
 ## **Program Structure**
 
@@ -68,19 +73,18 @@ $ cd src
 .
 │   README.md
 |
-├───bin
-|   └───
-|
 ├───doc
 |   └───Tucil2_K3_13522128_13522160.pdf
 |
 └───src
      |
      └───function
-     |   bf_bezier.py
-     |   dnc_bezier.py
-     |   input_reader.py
-     |   visualize_graph.py 
+     |       └─ __pycache__
+     |       |
+     |       └─bf_bezier.py
+     |         dnc_bezier.py
+     |         input_reader.py
+     |         visualize_graph.py 
      |
      └───main.py
 ```
