@@ -15,4 +15,6 @@ def bf_bezier_curve(x, y, cell_amount):
     xBezier = np.dot(x, array)
     yBezier = np.dot(y, array)
 
-    return xBezier, yBezier
+    bezier_curve = np.vstack((xBezier, yBezier)).T
+
+    return bezier_curve
