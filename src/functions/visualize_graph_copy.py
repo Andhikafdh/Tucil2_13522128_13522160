@@ -4,10 +4,10 @@ from functions.bf_bezier import bf_bezier_curve
 from functions.dnc_bezier import dnc_bezier_curve
 from matplotlib.animation import FuncAnimation
 
-def draw_graph(xPos, yPos, xBezierPosition, yBezierPosition):
+def draw_graph(positions, BezierPosition):
     plt.cla()
-    plt.plot(xPos, yPos, "b--", marker="o", label="Linear equation")
-    plt.plot(xBezierPosition, yBezierPosition, color="red", label="Bezier curve")
+    plt.plot(positions[:,0], positions[:,1], "b--", marker="o", label="Linear equation")
+    plt.plot(BezierPosition[:,0], BezierPosition[:,1], color="red", label="Bezier curve")
     plt.legend()
     plt.tight_layout()
     plt.show()
@@ -16,17 +16,17 @@ def animate_graph(positions, iterations, method):
     plt.figure(num="Bezier Curve")
     if method == 1:
         plt.title("Divide and Conquer Method")
-        for i in range(iterations + 1):
-            start = time()
+        # start = time()
 
-            xBezierPosition = dnc_bezier_curve(xPos, len(xPos), i)
-            yBezierPosition = dnc_bezier_curve(yPos, len(yPos), i)
+        BezierPositionsList = dnc_bezier_curve(positions, len(positions), iterations)
 
-            print(f"Waktu proses iterasi {i} = ", time() - start, " detik")
+        print(BezierPositionsList)
 
-            draw_graph(xPos, yPos, xBezierPosition, yBezierPosition)
+        # print(f"Waktu proses = ", time() - start, " detik")
 
-            plt.pause(1.5)
+        # for i in range(iterations + 1):
+        #     draw_graph(positions, BezierPositionsList[i])
+        #     plt.pause(1.5)
     # else:
     #     plt.title("Brute Force Method")
     #     for i in range(iterations + 1):
