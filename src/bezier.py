@@ -34,8 +34,8 @@ i = 0
 
 while i < points:
     try:
-        print(f"Masukkan posisi titik ke-{i+1} : ", end="")
-        x_position[i], y_position[i] = map(np.float64, input().strip().split())
+        print(f"Masukkan posisi titik P{i} : ", end="")
+        x_position[i], y_position[i] = map(np.float64, input().strip().split(","))
         i += 1
     except:
         print("Masukan posisi Anda salah")
@@ -60,8 +60,8 @@ x_bezier_position, y_bezier_position = bezier_curve(x_position, y_position, cell
 
 print(time() - start)
 
-plt.plot(x_position, y_position, "--", marker=".", label="Linear equation")
-plt.plot(x_bezier_position, y_bezier_position, color="red", label="Bezier curve")
+plt.plot(x_position, y_position, "--", marker="o", label="Linear equation")
+plt.plot(x_bezier_position, y_bezier_position,  marker="o", color="red", label="Bezier curve")
 
 plt.legend()
 
