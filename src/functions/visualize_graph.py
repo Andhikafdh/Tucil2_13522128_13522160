@@ -20,8 +20,8 @@ def draw_graph(Positions, BezierPositions):
 def animate_graph(positions, iterations, method):
     plt.figure(num="Bezier Curve")
     if method == 1:
-        plt.suptitle("Divide and Conquer Method")
         for i in range(iterations + 1):
+            plt.suptitle(f"Divide and Conquer (iterasi {i})")
             start = time()
 
             BezierPositions = dnc_bezier_curve(positions, len(positions), i)
@@ -31,15 +31,15 @@ def animate_graph(positions, iterations, method):
             draw_graph(positions, BezierPositions)
 
             plt.pause(1.5)
-    # else:
-    #     plt.title("Brute Force Method")
-    #     for i in range(iterations + 1):
-    #         start = time()
+    else:
+        for i in range(iterations + 1):
+            plt.suptitle(f"Brute-force (iterasi {i})")
+            start = time()
 
-    #         xBezierPosition, yBezierPosition = bf_bezier_curve(xPos, yPos, 2 ** i + 1)
+            BezierPositions = bf_bezier_curve(positions[:,0], positions[:,1], 2 ** i + 1)
 
-    #         print(f"Waktu proses iterasi {i} = ", time() - start, " detik")
+            print(f"Waktu proses iterasi {i} = ", time() - start, " detik")
 
-    #         draw_graph(xPos, yPos, xBezierPosition, yBezierPosition)
+            draw_graph(positions, BezierPositions)
 
-    #         plt.pause(1.5)
+            plt.pause(1.5)
