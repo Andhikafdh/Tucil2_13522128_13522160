@@ -41,9 +41,9 @@ def getMethod():
         print("|==== Metode yang dapat dipilih ====|")
         print("| 1. Divide and Conquer             |")
         print("| 2. Brute-force                    |")
-        print("|===================================|")
+        print("|===================================|\n")
         try:
-            method = int(input("Metode penyelesaian yang dipilih "))
+            method = int(input("Metode penyelesaian yang dipilih: \n"))
             if method != 1 and method != 2:
                 print("Masukkan angka sesuai dengan penomoran metode!")
             else:
