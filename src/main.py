@@ -41,9 +41,7 @@ def main():
     nPoints = getNPoints()
 
     positions = np.zeros((nPoints, 2), dtype=np.float64)
-    # y_position = np.zeros(nPoints, dtype=np.float64)
-
-    # setPoints(x_position, y_position, nPoints)
+  
     setPoints(positions, nPoints)
 
     nIterations = getNIterations()

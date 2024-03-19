@@ -1,4 +1,5 @@
 # Tucil2_13522128
+Bézier Curve using Bruteforce Algorithm and Divide & Conquer Algorithm
 
 > ## **Table of Contents**
 
@@ -14,7 +15,6 @@ Bézier curve is a smooth curves that are often used in graphic design, animatio
 and manufacturing. This curve is created by connecting several control points, which are
 determine the shape and direction of the curve.
 
->Bézier Curve using Bruteforce Algorithm and Divide and Conquer Algorithm
 
 ## **Requirements**
 
@@ -50,7 +50,7 @@ $ git clone git@github.com:Andhikafdh/Tucil2_13522128_13522160.git
 
 2. Open this repository in terminal
 
-### **Compile (optional)**
+### **Compile**
 
 1. Open terminal in root directory, navigate to 'src' directory. <br>
 

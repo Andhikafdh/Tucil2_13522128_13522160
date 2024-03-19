@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 from time import time
 from functions.bf_bezier import bf_bezier_curve
 from functions.dnc_bezier import dnc_bezier_curve
-from matplotlib.animation import FuncAnimation
 
 def draw_graph(Positions, BezierPositions):
     plt.cla()
